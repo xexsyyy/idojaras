@@ -22,3 +22,5 @@ Az oldal előre megadott adatokkal működik, külső API használata nélkül.
 - **HTML5** – Az oldal szerkezetének kialakítása.
 - **CSS3** – Megjelenés, stílusok és reszponzív dizájn.
 - **JavaScript** – A városválasztó és a dinamikus tartalom működtetése.
+
+## 📁 Projekt felépítése
