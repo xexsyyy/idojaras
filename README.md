@@ -32,3 +32,13 @@ idojaras-bemutato/
 ├── style.css
 └── README.md
 ```
+
+## 📱 Reszponzív megjelenés
+
+A weboldal különböző képernyőméretekhez alkalmazkodik:
+
+- Asztali számítógép.
+- Tablet.
+- Mobiltelefon.
+
+A cél egy esztétikus, átlátható és könnyen kezelhető felület kialakítása.
