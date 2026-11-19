@@ -42,3 +42,11 @@ A weboldal különböző képernyőméretekhez alkalmazkodik:
 - Mobiltelefon.
 
 A cél egy esztétikus, átlátható és könnyen kezelhető felület kialakítása.
+
+## 🚀 Használat
+
+1. Töltsd le vagy klónozd a projektet.
+2. Nyisd meg a projekt mappáját.
+3. Indítsd el az `index.html` fájlt egy böngészőben.
+4. Válaszd ki a kívánt várost.
+5. Tekintsd meg az időjárási adatokat.
