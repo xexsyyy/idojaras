@@ -24,3 +24,11 @@ Az oldal előre megadott adatokkal működik, külső API használata nélkül.
 - **JavaScript** – A városválasztó és a dinamikus tartalom működtetése.
 
 ## 📁 Projekt felépítése
+
+```text
+idojaras-bemutato/
+│
+├── index.html
+├── style.css
+└── README.md
+```
