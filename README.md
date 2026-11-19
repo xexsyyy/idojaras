@@ -16,3 +16,9 @@ Az oldal előre megadott adatokkal működik, külső API használata nélkül.
 - Napos, felhős és esős időjárási állapotok megjelenítése.
 - Interaktív városválasztó.
 - Előre megadott időjárási adatok használata.
+  
+## 🛠️ Felhasznált technológiák
+
+- **HTML5** – Az oldal szerkezetének kialakítása.
+- **CSS3** – Megjelenés, stílusok és reszponzív dizájn.
+- **JavaScript** – A városválasztó és a dinamikus tartalom működtetése.
