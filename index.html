@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időjárás Bemutató</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>☀️ Időjárás</h1>
+        <p>Ismerd meg a különböző városok időjárását!</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Felső időjárás panel -->
+
+        <section class="weather-box">
+
+            <h2>Válassz egy várost!</h2>
+
+            <select id="citySelect">
+                <option value="budapest">Budapest</option>
+                <option value="debrecen">Debrecen</option>
+                <option value="szeged">Szeged</option>
+                <option value="pecs">Pécs</option>
+                <option value="miskolc">Miskolc</option>
+                <option value="veszprem">Veszprém</option>
+            </select>
+
+            <div class="weather-info">
+
+                <h2 id="cityName">Budapest</h2>
+
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+
+                <h1 id="temperature">Betöltés...</h1>
+
+                <p id="weatherDescription">Adatok betöltése...</p>
+
+                <div class="details">
+
+                    <div class="detail-card">
+                        <span>💨</span>
+                        <p>Szélsebesség</p>
+                        <h3 id="wind">-</h3>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>💧</span>
+                        <p>Páratartalom</p>
+                        <h3 id="humidity">-</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Városok időjárása -->
+
+        <section class="city-section">
+
+            <h2>Városok időjárása</h2>
+
+            <div class="city-cards">
+
+                <div class="city-card" data-city="budapest">
+                    <h3>Budapest</h3>
+                    <span class="city-icon">⏳</span>
+                    <p class="city-temp">Betöltés...</p>
+                </div>
+
+                <div class="city-card" data-city="debrecen">
+                    <h3>Debrecen</h3>
+                    <span class="city-icon">⏳</span>
+                    <p class="city-temp">Betöltés...</p>
+                </div>
+
+                <div class="city-card" data-city="szeged">
+                    <h3>Szeged</h3>
+                    <span class="city-icon">⏳</span>
+                    <p class="city-temp">Betöltés...</p>
+                </div>
+
+                <div class="city-card" data-city="pecs">
+                    <h3>Pécs</h3>
+                    <span class="city-icon">⏳</span>
+                    <p class="city-temp">Betöltés...</p>
+                </div>
+
+                <div class="city-card" data-city="miskolc">
+                    <h3>Miskolc</h3>
+                    <span class="city-icon">⏳</span>
+                    <p class="city-temp">Betöltés...</p>
+                </div>
+
+                <div class="city-card" data-city="veszprem">
+                    <h3>Veszprém</h3>
+                    <span class="city-icon">⏳</span>
+                    <p class="city-temp">Betöltés...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Térkép -->
+
+        <section class="map-section">
+
+            <h2>🌍 Magyarország térképe</h2>
+
+            <p>Magyarország és környékének térképe</p>
+
+            <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=16.1%2C45.7%2C22.9%2C48.8&layer=mapnik"
+                width="100%"
+                height="450"
+                style="border: 3px solid white; border-radius: 18px;"
+                loading="lazy"
+                title="Magyarország térképe">
+            </iframe>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Időjárás Bemutató | Aktuális időjárási adatok alapján</p>
+    </footer>
+
+
+    <script>
+
+        // Városok koordinátái
+
+        const cities = {
+
+            budapest: {
+                name: "Budapest",
+                lat: 47.4979,
+                lon: 19.0402
+            },
+
+            debrecen: {
+                name: "Debrecen",
+                lat: 47.5316,
+                lon: 21.6273
+            },
+
+            szeged: {
+                name: "Szeged",
+                lat: 46.2530,
+                lon: 20.1414
+            },
+
+            pecs: {
+                name: "Pécs",
+                lat: 46.0727,
+                lon: 18.2323
+            },
+
+            miskolc: {
+                name: "Miskolc",
+                lat: 48.1035,
+                lon: 20.7784
+            },
+
+            veszprem: {
+                name: "Veszprém",
+                lat: 47.09327,
+                lon: 17.91149
+            }
+
+        };
+
+
+        // Időjárási állapot meghatározása
+
+        function getWeather(code) {
+
+            if (code === 0) {
+                return ["☀️", "Napos idő"];
+            }
+
+            else if (code <= 3) {
+                return ["⛅", "Felhős idő"];
+            }
+
+            else if (code <= 48) {
+                return ["🌫️", "Ködös idő"];
+            }
+
+            else if (code <= 67) {
+                return ["🌧️", "Esős idő"];
+            }
+
+            else if (code <= 77) {
+                return ["❄️", "Havas idő"];
+            }
+
+            else if (code <= 82) {
+                return ["🌦️", "Záporos idő"];
+            }
+
+            else if (code <= 86) {
+                return ["🌨️", "Havazás"];
+            }
+
+            else {
+                return ["⛈️", "Zivatar"];
+            }
+
+        }
+
+
+        // Időjárási adatok lekérése
+
+        async function getCityWeather(cityKey) {
+
+            const city = cities[cityKey];
+
+            const url =
+                `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=auto`;
+
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error("API hiba");
+            }
+
+            const data = await response.json();
+
+            return data.current;
+
+        }
+
+
+        // Felső időjárás panel frissítése
+
+        async function loadWeather(cityKey) {
+
+            const city = cities[cityKey];
+
+            document.getElementById("weatherDescription").textContent =
+                "Adatok betöltése...";
+
+            try {
+
+                const current = await getCityWeather(cityKey);
+
+                const weather = getWeather(current.weather_code);
+
+                document.getElementById("cityName").textContent =
+                    city.name;
+
+                document.getElementById("temperature").textContent =
+                    Math.round(current.temperature_2m) + "°C";
+
+                document.getElementById("weatherIcon").textContent =
+                    weather[0];
+
+                document.getElementById("weatherDescription").textContent =
+                    weather[1];
+
+                document.getElementById("wind").textContent =
+                    current.wind_speed_10m + " km/h";
+
+                document.getElementById("humidity").textContent =
+                    current.relative_humidity_2m + "%";
+
+            }
+
+            catch (error) {
+
+                document.getElementById("weatherDescription").textContent =
+                    "Nem sikerült betölteni az adatokat.";
+
+                console.error(error);
+
+            }
+
+        }
+
+
+        // Alsó városkártyák frissítése
+
+        async function loadAllCities() {
+
+            for (const key in cities) {
+
+                const card = document.querySelector(
+                    `.city-card[data-city="${key}"]`
+                );
+
+                try {
+
+                    const current = await getCityWeather(key);
+
+                    const weather = getWeather(current.weather_code);
+
+                    card.querySelector(".city-icon").textContent =
+                        weather[0];
+
+                    card.querySelector(".city-temp").textContent =
+                        Math.round(current.temperature_2m) + "°C";
+
+                }
+
+                catch (error) {
+
+                    card.querySelector(".city-temp").textContent =
+                        "Nem elérhető";
+
+                    console.error(key, error);
+
+                }
+
+            }
+
+        }
+
+
+        // Városválasztó működése
+
+        const citySelect = document.getElementById("citySelect");
+
+        citySelect.addEventListener("change", function() {
+
+            loadWeather(citySelect.value);
+
+        });
+
+
+        // Alapértelmezett város betöltése
+
+        loadWeather("budapest");
+
+        // Mind a hat város betöltése
+
+        loadAllCities();
+
+    </script>
+
+</body>
+</html>
