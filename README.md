@@ -1,52 +1,80 @@
-#  Időjárás-bemutató oldal
+# Időjárás Bemutató
 
-##  Projekt leírása
+## Projekt leírása
 
-A projekt egy modern, reszponzív időjárás-bemutató weboldal, amely több város időjárási adatait jeleníti meg.
+A projekt egy modern, reszponzív időjárás-bemutató weboldal, amely több magyarországi város aktuális időjárási adatait jeleníti meg.
 
-A felhasználók kiválaszthatják a kívánt várost, és megtekinthetik annak hőmérsékletét, valamint az aktuálisnak megjelenített időjárási állapotát.
+A felhasználók kiválaszthatják a kívánt várost, és megtekinthetik annak aktuális hőmérsékletét, időjárási állapotát, szélsebességét és páratartalmát.
 
-Az oldal előre megadott adatokkal működik, külső API használata nélkül.
+Az oldal az adatokat az Open-Meteo API segítségével tölti be.
 
-##  Funkciók
+## Funkciók
 
-- Több város időjárásának megjelenítése.
+- Több város aktuális időjárásának megjelenítése.
+- Interaktív városválasztó.
 - Hőmérséklet kijelzése.
 - Időjárási ikonok használata.
-- Napos, felhős és esős időjárási állapotok megjelenítése.
-- Interaktív városválasztó.
-- Előre megadott időjárási adatok használata.
-  
-##  Felhasznált technológiák
+- Napos, felhős, esős és havas időjárás megjelenítése.
+- Szélsebesség és páratartalom kijelzése.
+- Hat város időjárásának egyidejű megjelenítése.
+- Magyarország térképének beágyazása.
+- Reszponzív megjelenés mobiltelefonon, tableten és számítógépen.
 
-- **HTML5** – Az oldal szerkezetének kialakítása.
-- **CSS3** – Megjelenés, stílusok és reszponzív dizájn.
-- **JavaScript** – A városválasztó és a dinamikus tartalom működtetése.
+## Megjelenített városok
 
-##  Projekt felépítése
+- Budapest
+- Debrecen
+- Szeged
+- Pécs
+- Miskolc
+- Veszprém
 
-```text
+## Felhasznált technológiák
+
+- HTML5 – Az oldal szerkezetének kialakítása.
+- CSS3 – Megjelenés, stílusok és reszponzív dizájn.
+- JavaScript – A városválasztó és a dinamikus tartalom működtetése.
+- Open-Meteo API – Aktuális időjárási adatok lekérése.
+- OpenStreetMap – Beágyazott térkép megjelenítése.
+
+## Projekt felépítése
+
 idojaras-bemutato/
 │
 ├── index.html
 ├── style.css
 └── README.md
-```
 
-##  Reszponzív megjelenés
+## Reszponzív megjelenés
 
 A weboldal különböző képernyőméretekhez alkalmazkodik:
 
-- Asztali számítógép.
-- Tablet.
-- Mobiltelefon.
+- Asztali számítógép
+- Tablet
+- Mobiltelefon
 
 A cél egy esztétikus, átlátható és könnyen kezelhető felület kialakítása.
 
-##  Használat
+## Használat
 
 1. Töltsd le vagy klónozd a projektet.
 2. Nyisd meg a projekt mappáját.
-3. Indítsd el az `index.html` fájlt egy böngészőben.
+3. Indítsd el az index.html fájlt egy böngészőben.
 4. Válaszd ki a kívánt várost.
-5. Tekintsd meg az időjárási adatokat.
+5. Tekintsd meg az aktuális időjárási adatokat.
+
+Fontos: Az időjárási adatok betöltéséhez internetkapcsolat szükséges.
+
+## Adatforrások
+
+- Open-Meteo: https://open-meteo.com/
+- OpenStreetMap: https://www.openstreetmap.org/
+
+## Készítette
+
+Időjárás Bemutató projekt
+
+Buchelt Kristóf
+Szentes Domán
+
+Év: 2026
