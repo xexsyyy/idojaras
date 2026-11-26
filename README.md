@@ -1,6 +1,6 @@
-# 🌤️ Időjárás-bemutató oldal
+#  Időjárás-bemutató oldal
 
-## 📌 Projekt leírása
+##  Projekt leírása
 
 A projekt egy modern, reszponzív időjárás-bemutató weboldal, amely több város időjárási adatait jeleníti meg.
 
@@ -8,7 +8,7 @@ A felhasználók kiválaszthatják a kívánt várost, és megtekinthetik annak 
 
 Az oldal előre megadott adatokkal működik, külső API használata nélkül.
 
-## ✨ Funkciók
+##  Funkciók
 
 - Több város időjárásának megjelenítése.
 - Hőmérséklet kijelzése.
@@ -17,13 +17,13 @@ Az oldal előre megadott adatokkal működik, külső API használata nélkül.
 - Interaktív városválasztó.
 - Előre megadott időjárási adatok használata.
   
-## 🛠️ Felhasznált technológiák
+##  Felhasznált technológiák
 
 - **HTML5** – Az oldal szerkezetének kialakítása.
 - **CSS3** – Megjelenés, stílusok és reszponzív dizájn.
 - **JavaScript** – A városválasztó és a dinamikus tartalom működtetése.
 
-## 📁 Projekt felépítése
+##  Projekt felépítése
 
 ```text
 idojaras-bemutato/
@@ -33,7 +33,7 @@ idojaras-bemutato/
 └── README.md
 ```
 
-## 📱 Reszponzív megjelenés
+##  Reszponzív megjelenés
 
 A weboldal különböző képernyőméretekhez alkalmazkodik:
 
@@ -43,7 +43,7 @@ A weboldal különböző képernyőméretekhez alkalmazkodik:
 
 A cél egy esztétikus, átlátható és könnyen kezelhető felület kialakítása.
 
-## 🚀 Használat
+##  Használat
 
 1. Töltsd le vagy klónozd a projektet.
 2. Nyisd meg a projekt mappáját.
